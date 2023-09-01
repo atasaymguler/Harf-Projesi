@@ -10,12 +10,17 @@ import {lorem} from 'faker'; //Burada import ederiz.
 export class AppComponent {
 
   randomText = lorem.sentence();
-  enteredText =""; //İnputtan gelen değeri buraya atmak için değişken oluşturduk, başlangıç değeri false yani boş
+  enteredText ="";
 
   getInputValue(value: string)
   {
-    this.enteredText = value;  //İnputtan gelen değeri atarız
-    console.log(value); //inputtan gelen değeri kontrol ederiz.
+    this.enteredText = value; 
+    console.log(this.randomText.split('')); 
+    console.log(this.randomText.split(' ')); 
+
+    //split metotu geriye array döner
+    //split('') şeklinde kullanırsam boşluksuz ne kadar karakter varsa ör/20 karakterli ise 20 tane elemanı array döner boşluğu da saydı, noktayı da saydı ne kadar karakter içeriyorsa hepsini içeren bir array döndürür
+    //split(' ') şelinde boşluklu kullanırsam boşluğu görünce keser kestiğe yere kadar 1 eleman sayar, boşuğa kadar kelimeyi tek eleman sayar  asd qwe asd 3 tane elemanlı  arrays döner boşlukları saymaz.
 
   }
 
