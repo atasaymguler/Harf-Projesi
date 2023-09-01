@@ -8,7 +8,7 @@
                     <input class="input" (input)="getInputValue($event.target.value)" />
                     <!-- value hata verir tsconfig.json'da değişiklik yaparsak düzelir. -->
                 </div>
-                <div>
+                 <div *ngIf="randomText === enteredText">     <!-- Eğer inputa gelen değer ile random text ayni ise Bravo çıkar -->
                     <h1 class="title">Bravo!</h1>
                 </div>
             </div>
