@@ -3,8 +3,8 @@
         <div class="columns is-centered">
             <div class="box column is-one-third">
                 <h1 class="title has-text-centered">Harf Eşleştirme</h1>
-                <p class="has-text-centered"><span *ngFor="let letter of randomText.split('')">{{letter}}</span></p>
-                <!-- Boşluk olmasın diye span etiketi ilet letter arasında boşluk olmamalı (bitiş ve kapanışta) ve ngFor'u spana yap -->
+                <p class="has-text-centered"><span [class]="compare(letter, enteredText[i])" *ngFor="let letter of randomText.split(''); let i =index" >{{letter}}</span></p>
+                <!-- Burada bir ngFor döngüsü var ve index tutuluyor index nedir ? diyelim 20 karakterli bir diziyi dönüyor c 0'ıncı index a 1.index düşün ngFor kullanılıdığı için içerisinde tutuluyor  can düşün randomText'i c 0.index a 1.index böylelikle kıyaslama yapabilirim hangi harfi dönüyorsa onun indexi'de index'te tutuluyor ve biz onu enteredText[i]'ye gönderdik girilen textin kelimelerini tek tek karşılaştırmak için'  -->
                 <div class="field">
                     <input class="input" (input)="getInputValue($event.target.value)" />           
                 </div>

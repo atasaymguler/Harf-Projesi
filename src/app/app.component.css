@@ -6,3 +6,22 @@
     min-height: 747px; /* Burdaki px'li f12'den main areyı inceliyip min-height: Bu kısmına; tıklarsak Yukarı aşağı tuşuyla arttırıp azaltırız ona göre ayarlarız */
     background-color: blueviolet;
 }
+
+.pending    
+{
+    color:gray;
+    /* Hiçbir aksiyon yoksa yani doğru değilse veya yanlış değilse gri gözükmesi için yazdık */
+}
+
+.correct
+{
+    color:green;
+    /* Doğru ise yeşil gözüksün */
+}
+
+.incorrect
+{
+    color:red;
+    font-weight: bold;
+    /* Yanlış ise kırmızı gözüksün ve font'u biraz büyütelim */
+}

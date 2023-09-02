@@ -15,13 +15,23 @@ export class AppComponent {
   getInputValue(value: string)
   {
     this.enteredText = value; 
-    console.log(this.randomText.split('')); 
-    console.log(this.randomText.split(' ')); 
-
-    //split metotu geriye array döner
-    //split('') şeklinde kullanırsam boşluksuz ne kadar karakter varsa ör/20 karakterli ise 20 tane elemanı array döner boşluğu da saydı, noktayı da saydı ne kadar karakter içeriyorsa hepsini içeren bir array döndürür
-    //split(' ') şelinde boşluklu kullanırsam boşluğu görünce keser kestiğe yere kadar 1 eleman sayar, boşuğa kadar kelimeyi tek eleman sayar  asd qwe asd 3 tane elemanlı  arrays döner boşlukları saymaz.
 
   }
 
+  ata = "incorrect"; // html'deki class'a bu şekilde css classı gönderebiliyoruz html'de [class]="ata " yazarsak class'ı atarız.
+
+  compare(randomLetter:string, enteredLetter:string)
+  {
+ //   console.log(randomLetter, enteredText);  Bu şekilde random gelen textin harfleri ile girilen değerin harfleri tek tek yazılır
+  
+ if(!enteredLetter) //boş olması false olarak algılanır eğer boş ise false olur ve !false = true olur ve 'pending' döner
+ {
+   return 'pending';
+ }
+
+ return randomLetter ===  enteredLetter ? "correct": "incorrect";
+ // eğer eşitlerse 'correct' classı devreye girer değilseler 'incorrect' classı devreye girer.
+
+  }
+  
 }
